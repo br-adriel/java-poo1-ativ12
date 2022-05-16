@@ -1,6 +1,10 @@
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.io.File;
+import javax.swing.JFrame;
+import java.awt.Dimension;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 
 /**
  * Resolução da Lista 2 da unidade 1
@@ -81,5 +85,27 @@ public class Texto03
     public void exercicio3_05(String caminho) {
         File arq = new File(caminho);
         if (arq != null) arq.delete();
+    }
+    
+    /*
+     * Escreva um programa que mostre uma janela com dois menus - Arquivo
+     * e Editar. Dica: você deverá utilizar objetos das classes JFrame,
+     * JMenuBar e JMenu)
+     */
+    public void exercicio3_06() {
+        // Itens da barra de menu       
+        JMenu menuArquivo = new JMenu("Arquivo");
+        JMenu menuEditar = new JMenu("Editar");
+        
+        // Configuarcao da barra de menu
+        JMenuBar barraMenu = new JMenuBar();
+        barraMenu.add(menuArquivo);
+        barraMenu.add(menuEditar);
+        
+        // Configuracao da janela
+        JFrame janela = new JFrame("Questao 6");
+        janela.setMinimumSize(new Dimension(500, 400));
+        janela.setJMenuBar(barraMenu);
+        janela.setVisible(true);
     }
 }
