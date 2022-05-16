@@ -74,4 +74,12 @@ public class Texto03
         }
         return nomesArquivos;
     }
+    
+    /*
+     * Receber um caminho para um arquivo como parâmetro e deletar o arquivo
+     */
+    public void exercicio3_05(String caminho) {
+        File arq = new File(caminho);
+        if (arq != null) arq.delete();
+    }
 }
