@@ -170,4 +170,24 @@ public class Texto03
         }
         return d1.after(d2) ? formatador.format(d1) : formatador.format(d2);
     }
+    
+    /* 
+     * Receber um array de Dates e modificar o array de forma que fique
+     * em ordem cronológica. Dica: use o método compareTo da classe Date
+     */
+    public Date[] exercicio3_11(Date[] datas) {
+        int trocas = 0;
+        do {
+            trocas = 0;
+            for (int i=0; i<datas.length-1; i++) {
+                if (datas[i].compareTo(datas[i+1]) > 0) {
+                    Date aux = datas[i];
+                    datas[i] = datas[i+1];
+                    datas[i+1] = aux;
+                    trocas++;
+                }
+            }
+        } while (trocas > 0);
+        return datas;
+    }
 }
