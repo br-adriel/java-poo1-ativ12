@@ -108,4 +108,22 @@ public class Texto03
         janela.setJMenuBar(barraMenu);
         janela.setVisible(true);
     }
+    
+    /*
+     * Escreva um método que receba como parâmetro um String representando
+     * um caminho para um arquivo executável e execute tal arquivo. Dica:
+     * pesquise no google "java como executar programas externos" (SEM as
+     * aspas) e seja feliz (você pode ter que escrever código que não vai
+     * entender bem - a ideia aqui é que você desenrole a solução
+     * independentemente de entender o que está acontecendo. Acredite,
+     * isso lhe será muito útil em sua vida de programador) 
+     */
+    public void exercicio3_07(String caminho) {
+        String comando = "cmd /c \"" + caminho + "\"";
+        try {
+            Runtime.getRuntime().exec(comando);
+        } catch (java.io.IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
 }
