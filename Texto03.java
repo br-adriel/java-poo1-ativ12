@@ -190,4 +190,21 @@ public class Texto03
         } while (trocas > 0);
         return datas;
     }
+    
+    /*
+     * Receber uma data, na forma de String, no formato dd/mm/aaaa,
+     * e retornar o dia da semana referente à data.
+     */
+    public String exercicio3_12(String data) {
+        SimpleDateFormat formatadorString = new SimpleDateFormat("EEEE");
+        SimpleDateFormat formatadorDate = new SimpleDateFormat("dd/MM/yyyy");
+        
+        Date novaData = null;
+        try {
+            novaData = formatadorDate.parse(data);
+        } catch (java.text.ParseException pe) {
+            pe.printStackTrace();
+        }
+        return formatadorString.format(novaData);
+    }
 }
