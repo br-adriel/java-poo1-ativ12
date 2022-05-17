@@ -155,4 +155,19 @@ public class Texto03
         janela.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         janela.setVisible(true);
     }
+    
+    /*
+     * Receber duas datas como parâmetro e retornar a mais recente
+     */
+    public String exericio3_10(String data1, String data2) {
+        SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+        Date d1 = null, d2 = null;
+        try {
+            d1 = formatador.parse(data1);
+            d2 = formatador.parse(data2);
+        } catch (java.text.ParseException pe) {
+            pe.printStackTrace();
+        }
+        return d1.after(d2) ? formatador.format(d1) : formatador.format(d2);
+    }
 }
