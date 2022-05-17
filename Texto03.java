@@ -2,6 +2,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.io.File;
 import javax.swing.JFrame;
+import java.awt.Toolkit;
 import java.awt.Dimension;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -140,5 +141,18 @@ public class Texto03
         } catch (java.io.IOException ioe) {
             ioe.printStackTrace();
         }
+    }
+    
+    /*
+     * Faça um método que mostre uma Janela (vazia) do tamanho da tela.
+     * O programa deve funcionar em monitores com diferentes resoluções.
+     * Dica de professor: a classe ToolKit pode prover o tamanho da tela.
+     * Dica de MÃE: pesquise "como criar uma janela tela cheia em java"
+     * (sem aspas, pelo amor de Deus) e seja feliz.
+     */
+    public void exercicio3_09() {
+        JFrame janela = new JFrame("Questao 9");
+        janela.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        janela.setVisible(true);
     }
 }
