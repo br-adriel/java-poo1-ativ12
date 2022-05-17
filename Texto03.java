@@ -126,4 +126,19 @@ public class Texto03
             ioe.printStackTrace();
         }
     }
+    
+    /*
+     * Escreva um método que receba o caminho de um arquivo de texto (txt)
+     * e abra o arquivo no bloco de notas (notepad no windows ou qualquer
+     * gedit no Ubuntu). Dica: você vai precisar apenas da solução da questão
+     * anterior e de um real a mais de esperteza.
+     */
+    public void exercicio3_08(String caminho) {
+        String comando = "notepad \"" + caminho + "\"";
+        try {
+            Runtime.getRuntime().exec(comando);
+        } catch (java.io.IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
 }
