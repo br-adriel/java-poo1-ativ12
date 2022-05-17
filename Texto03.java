@@ -159,7 +159,7 @@ public class Texto03
     /*
      * Receber duas datas como parâmetro e retornar a mais recente
      */
-    public String exericio3_10(String data1, String data2) {
+    public String exercicio3_10(String data1, String data2) {
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
         Date d1 = null, d2 = null;
         try {
